@@ -1,0 +1,138 @@
+@import "variables";
+@import "mixins";
+
+.left-aside{
+    text-align: center;
+    width:317px ;
+    padding: 15px;
+    h2{
+        text-align: left;
+        @include font("Jua", system-ui);
+        font-size:35px;
+        font-weight:$light;
+        line-height: 43.75px;
+    }
+
+    .aside-left-img{
+        margin: auto;
+        width: 90px;
+    }
+
+    .caption{
+        @extend .aside-left-img;
+        width: 213px;
+        margin-bottom: 64px;
+        .name{
+            @include font("Jua", system-ui);
+            font-size: $very-large;
+            font-weight:$light;
+            line-height: 31.25px;
+            color:$black;
+        }
+
+        .email{
+            @extend.birth-date;
+            font-size: $big;
+        }
+
+    }
+
+    .birth-date{
+        @include font("Inter", system-ui);
+        @include flex(start);
+        font-size: $small;
+        font-weight: $medium;
+        color:$light-gray4;
+        padding: 10px;
+        gap: 8px;
+    }
+    .phone{
+        @extend .birth-date;
+    }
+    .location{
+        @extend .phone;
+    }
+}
+
+.right-aside{
+    margin-top: 113px;
+    @extend .left-aside;
+    .aside-right-img{
+        @extend .aside-left-img;
+        width:112.26px;
+    }
+
+    .caption{
+        @extend .caption;
+        .name{
+            @extend .name;
+            font-size: $big;
+            line-height: 22.5px;
+        }
+        .email{
+            @extend .email;
+            font-size:$small;
+            line-height: 18.15px;
+        }
+    }
+
+    .option-info{
+        width: 260px;
+        margin-bottom: 20px;
+        background-color:$light-gray6;
+        padding: 8px;
+        @include flex(space-between);
+        @include border(10px,0px);
+        @include font("Jua", system-ui);
+        .contact-style{
+            background-color:$dark-green3;
+            color: $dark-green1;
+            @include border(10px,0px);
+            width: 80px;
+        }
+        span{
+            cursor: pointer;
+        }
+    }
+
+    .phone{
+        text-align: left;
+        @include flex(space-between);
+
+        .number{
+            color: $black;
+        }
+
+        .phone-icon{
+            background-color:$light-green2;
+            width:43.66px ;
+            @include border(4px,0px);
+            text-align: center;
+            padding-top:7px;
+            color: $light-green1;
+        }
+    }
+    .email{
+        @extend .phone;
+        .mail{
+            @extend .number;
+        }
+
+        .email-icon{
+            @extend .phone-icon;
+            background-color:$light-yellow;
+            color:$dark-yellow;
+        }
+    }
+    .chat{
+        @extend .email;
+        .user{
+            @extend .mail;
+        }
+        .chat-icon{
+            @extend .email-icon;
+            background-color:$light-blue;
+            color:$dark-blue;
+        }
+        }
+    }

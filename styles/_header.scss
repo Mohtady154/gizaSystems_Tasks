@@ -1,0 +1,52 @@
+@import 'variables';
+@import "mixins";
+
+
+header{
+    @include flex(flex-end);
+    nav{
+        margin-top: 30px;
+        margin-right: 43px;
+        width: 1050px;
+        @include flex(space-between);
+        
+            .address{
+                width:150px;
+                h1{
+                    @include font("Jua", system-ui);
+                    font-weight:$light;
+                    font-size:$very-large;
+                    line-height: 30px;
+                }
+            }
+        
+            .icons{
+                .icon{
+                    @include border(5px,0px);
+                    padding: 9px;
+                    text-align: center;
+                    width: 40px;
+                    height: 40px;
+                    background-color:$light-gray5;
+                }
+                button{
+                    width: 140px;
+                    background-color: $dark-green2;
+                    @include border(5px,0px);
+                    @include font("Inter", system-ui);
+                    font-weight: $medium;
+                    font-size: $small;
+                    color: $dark-gray1;
+                    padding: 10px;
+                    cursor: pointer;
+
+                        i{
+                            @include border(50%,2px);
+                            padding:1px;
+                        }
+                }
+            }
+        }
+        
+}
+
