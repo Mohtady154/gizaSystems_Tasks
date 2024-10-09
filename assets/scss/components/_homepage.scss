@@ -1,0 +1,95 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "cards" as *;
+
+.design-homepage{
+   
+    @extend .card-list;
+   
+    .title{
+       
+        padding-left: 28px;
+        padding-bottom: 8px;
+        @include font($small,$size-4,$line-height-9,$s_3);
+    }
+
+    .special{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+    
+    .date{
+        @include flex(normal,normal);
+        padding-left: 28px;
+        padding-bottom: 16px;
+        p{
+            padding-left: 4px;
+        }
+    }
+
+    .lorem{
+        @include font($small,$size-3,$line-height-5,$s_5);
+        padding-left: 28px;
+        padding-right: 28px;;
+        padding-bottom: 20px;
+    }
+
+    .progress-title{
+        @include flex(space-between,normal);
+        @include font($medium,$size-3,$line-height-4,$s_3);
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .people{
+        @include flex(space-between,normal);
+        position: relative;
+
+        .people-items{
+           @include flex(normal,normal);
+           
+           .count{
+            @include font($small,$size-2,$line-height-3,$s_5);
+           width: 50%;
+           margin: auto;
+
+           }
+        }
+
+        .images{
+            margin-left: 28px;
+            width: 98px;
+            @include flex(normal,normal);
+           
+
+            .span-1{
+                width: 36px;
+                position: absolute;
+                z-index: 9;
+                left: 0px;
+                bottom: 0px;
+            }
+
+            .span-2{
+                margin-top: 20px;
+                width: 36px;
+                position: absolute;
+                z-index: 8;
+                left: 27px;
+                bottom: 0px;
+            }
+            
+            .span-3{
+                width: 36px;
+                position: absolute;
+                z-index: 7;
+                left: 55px;
+                bottom: 0px;
+            }
+
+        }
+    }
+
+
+}

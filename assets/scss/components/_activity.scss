@@ -1,0 +1,25 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "cards" as *;
+
+.activity{
+    @extend .card-list;
+    // width: 21%;
+    margin-top:10px;
+    h2{
+        margin-left: 28px;
+        @include font($medium,$size-16,$linie-height-25,$s_3);
+    }
+
+    .activity-item{
+        @include flex(normal,normal);
+        margin: 28px;
+        span{
+            @include border(50%,0px);
+            width: 28px;
+            height:28px ;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}

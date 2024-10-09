@@ -1,0 +1,35 @@
+.container {  
+    display: grid;
+    margin: auto;
+    width: 72%;
+    grid-template-columns: repeat(5,0.06fr) repeat(4,0.08fr) repeat(3,0.13fr) ;
+    grid-auto-rows: repeat(11,minmix(200px,auto)); 
+    gap: 40px;
+    grid-template-areas:
+      "assign assign assign assign assign weekly weekly weekly weekly tasks tasks tasks"
+      "card-list card-list card-list card-list card-list weekly weekly weekly weekly tasks tasks tasks"
+      "card-list card-list card-list card-list card-list weekly weekly weekly weekly tasks tasks tasks"
+      "card-list card-list card-list card-list card-list weekly weekly weekly weekly tasks tasks tasks"
+      "card-list card-list card-list card-list card-list weekly weekly weekly weekly progress progress progress"
+      "card-list card-list card-list card-list card-list activity activity activity activity progress progress progress"
+      "card-list card-list card-list card-list card-list activity activity activity activity progress progress progress"
+      "design design design design design activity activity activity activity progress progress progress"
+      "design design design design design activity activity activity activity progress progress progress"
+      "design design design design design activity activity activity activity . . ."
+      "design design design design design . . . . . . .";
+  }
+  
+  .assign { grid-area: assign; }
+  
+  .weekly { grid-area: weekly; }
+  
+  .tasks { grid-area: tasks; }
+  
+  .card-list { grid-area: card-list; }
+  
+  .design { grid-area: design; }
+  
+  .activity { grid-area: activity; }
+  
+  .progress { grid-area: progress; }
+  
