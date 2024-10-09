@@ -1,0 +1,27 @@
+@import "variables";
+
+@mixin border($radius,$size){
+    border-color: $light-gray2;
+    border-radius: $radius;
+    border: solid $size ;
+}
+
+@mixin flex($space){
+    display: flex;
+    justify-content:$space;
+}
+
+@mixin position($left,$top){
+    position:absolute;
+    left : $left;
+    top: $top;
+}
+
+@mixin font($type,$type2){
+    font-family: $type,$type2 ;
+}
+
+@mixin row(){
+    @include border(10px,0.5px);
+    margin: 20px;
+}

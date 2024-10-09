@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav {
+  margin-top: 30px;
+  margin-right: 43px;
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .address {
+  width: 150px;
+}
+header nav .address h1 {
+  font-family: "Jua", system-ui;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+header nav .icons .icon {
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 5px;
+  border: solid 0px;
+  padding: 9px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(217, 217, 217, 0.58);
+}
+header nav .icons button {
+  width: 140px;
+  background-color: rgb(85, 200, 117);
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 5px;
+  border: solid 0px;
+  font-family: "Inter", system-ui;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(48, 48, 48);
+  padding: 10px;
+  cursor: pointer;
+}
+header nav .icons button i {
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 50%;
+  border: solid 2px;
+  padding: 1px;
+}
+
+.left-aside, .right-aside {
+  text-align: center;
+  width: 317px;
+  padding: 15px;
+}
+.left-aside h2, .right-aside h2 {
+  text-align: left;
+  font-family: "Jua", system-ui;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 43.75px;
+}
+.left-aside .aside-left-img, .right-aside .aside-left-img, .right-aside .aside-right-img, .left-aside .caption, .right-aside .caption {
+  margin: auto;
+  width: 90px;
+}
+.left-aside .caption, .right-aside .caption {
+  width: 213px;
+  margin-bottom: 64px;
+}
+.left-aside .caption .name, .right-aside .caption .name {
+  font-family: "Jua", system-ui;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.25px;
+  color: rgb(0, 0, 0);
+}
+.left-aside .caption .email, .left-aside .caption .right-aside .chat, .right-aside .caption .email, .right-aside .caption .chat {
+  font-size: 18px;
+}
+.left-aside .birth-date, .right-aside .birth-date, .left-aside .phone, .left-aside main table .email, main table .left-aside .email, .right-aside .phone, .right-aside .email, .right-aside .chat, .right-aside .caption .email, .left-aside .location, .right-aside .location, .left-aside .caption .email {
+  font-family: "Inter", system-ui;
+  display: flex;
+  justify-content: start;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(124, 124, 124);
+  padding: 10px;
+  gap: 8px;
+}
+.right-aside {
+  margin-top: 113px;
+}
+.right-aside .aside-right-img {
+  width: 112.26px;
+}
+.right-aside .caption .name {
+  font-size: 18px;
+  line-height: 22.5px;
+}
+.right-aside .caption .email, .right-aside .caption .chat {
+  font-size: 15px;
+  line-height: 18.15px;
+}
+.right-aside .option-info {
+  width: 260px;
+  margin-bottom: 20px;
+  background-color: rgb(238, 238, 238);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 10px;
+  border: solid 0px;
+  font-family: "Jua", system-ui;
+}
+.right-aside .option-info .contact-style {
+  background-color: rgba(68, 222, 111, 0.94);
+  color: rgb(0, 117, 33);
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 10px;
+  border: solid 0px;
+  width: 80px;
+}
+.right-aside .option-info span {
+  cursor: pointer;
+}
+.right-aside .phone, .right-aside .email, .right-aside .chat, .right-aside .caption .email, .right-aside .location {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.right-aside .phone .number, .right-aside .email .number, .right-aside .chat .number, .right-aside .email .mail, .right-aside .chat .mail, .right-aside .chat .user, .right-aside .location .number {
+  color: rgb(0, 0, 0);
+}
+.right-aside .phone .phone-icon, .right-aside .email .phone-icon, .right-aside .chat .phone-icon, .right-aside .email .email-icon, .right-aside .chat .email-icon, .right-aside .chat .chat-icon, .right-aside .location .phone-icon {
+  background-color: rgba(137, 242, 166, 0.66);
+  width: 43.66px;
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 4px;
+  border: solid 0px;
+  text-align: center;
+  padding-top: 7px;
+  color: rgb(0, 201, 56);
+}
+.right-aside .email .email-icon, .right-aside .chat .email-icon, .right-aside .chat .chat-icon {
+  background-color: rgba(242, 225, 137, 0.66);
+  color: rgb(255, 180, 34);
+}
+.right-aside .chat .chat-icon {
+  background-color: rgba(127, 209, 255, 0.66);
+  color: rgb(38, 129, 237);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+main table {
+  width: 753px;
+  border-color: rgba(137, 137, 137, 0.43);
+  border-radius: 10px;
+  border: solid 0.5px;
+  margin: 20px;
+}
+main table .david-img {
+  width: 70px;
+}
+main table .maria-img {
+  width: 72px;
+}
+main table .name-style, main table .job-style, main table .phone, main table .email, main table .right-aside .caption .email, .right-aside .caption main table .email, main table .right-aside .chat, .right-aside main table .chat, main table .left-aside .location, .left-aside main table .location, main table .right-aside .location, .right-aside main table .location, main table .right-aside .email, .right-aside main table .email {
+  font-family: "Inter", system-ui;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+main table .job-style, main table .phone, main table .email, main table .right-aside .caption .email, .right-aside .caption main table .email, main table .right-aside .chat, .right-aside main table .chat, main table .left-aside .location, .left-aside main table .location, main table .right-aside .location, .right-aside main table .location, main table .right-aside .email, .right-aside main table .email {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+}
+main table .phone, main table .email, main table .right-aside .caption .email, .right-aside .caption main table .email, main table .right-aside .chat, .right-aside main table .chat, main table .left-aside .location, .left-aside main table .location, main table .right-aside .location, .right-aside main table .location, main table .right-aside .email, .right-aside main table .email {
+  font-size: 18px;
+  line-height: 21.78px;
+}
+main table .email, main table .right-aside .caption .email, .right-aside .caption main table .email, main table .right-aside .chat, .right-aside main table .chat {
+  font-weight: 24px;
+}/*# sourceMappingURL=styles.css.map */

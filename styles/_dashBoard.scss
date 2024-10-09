@@ -1,0 +1,42 @@
+@import 'variables';
+@import "mixins";
+
+main{
+@include flex(space-between);
+
+    table{
+    width: 753px;
+    @include row();
+        .david-img{
+            width: 70px;
+        }
+        .maria-img{
+            width: 72px;
+        }
+
+        .name-style{
+            @include font("Inter", system-ui);
+            font-size:$large ;
+            font-weight:$heavy ;
+            line-height: 24px;
+        }
+
+        .job-style{
+            @extend .name-style;
+            font-size: $small;
+            font-weight: $medium;
+            line-height: 18px;
+        }
+
+        .phone{
+            @extend .job-style;
+            font-size: $big;
+            line-height: 21.78px;
+        }
+
+        .email{
+            @extend .phone;
+            font-weight: $very-large;
+        }
+    }
+}
