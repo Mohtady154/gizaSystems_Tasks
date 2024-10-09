@@ -1,0 +1,16 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "cards" as *;
+
+.task-progress{
+    padding: 28px;
+    @extend .card-list;
+    h2{
+        @include font($medium,$size-5,$line-height-7,$s_3);
+    }
+    .task-title{
+        @include flex(space-between,normal);
+        margin-top: 24px;
+    }
+
+    }

@@ -1,0 +1,31 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "cards" as *;
+
+
+.weekly-progress{
+    margin-top: 40px;
+    // width: 21%;
+    @include border(8px,0px);
+    p{
+        padding-left: 28px;
+    }
+    .title{
+        @include flex(space-between,normal);
+        padding:28px 28px 12px 28px;
+        h2{
+            @include font($medium,$size-5,$line-height-7,$s_3);
+        }
+    }
+
+    .content{
+        margin-top:48px;
+        padding-bottom: 48px;
+        text-align: center;
+        
+        .p-1{
+            @include font($big,$size-7,$line-height-10,$s_3);
+            padding-bottom: 7px;
+        }
+    }
+}

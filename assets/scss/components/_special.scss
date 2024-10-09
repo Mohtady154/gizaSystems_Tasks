@@ -1,0 +1,70 @@
+@use "../abstract/variables" as *;
+@use "../abstract/colors" as*;
+@use "../abstract/mixins" as *;
+
+
+.font-small{
+        @include font($small,$size-2,$line-height-1,$s_3);
+        color:$light-gray;
+}
+
+.font-small-2{
+    @extend .font-small;
+    line-height: $line-height-5;
+    color: $deep-black;
+}
+
+.progress-loading{
+    @include border(200px,0px);
+    background-color:  rgba(52, 167, 112, 0.1);
+    margin: 12px 28px 24px 28px; 
+}
+.loading-child{
+    @include border(200px,0px);
+    width: 45%;
+    height: 5px;
+}
+
+.progress-parent1{
+    @include border(200px,0px);
+    background-color:  rgba(157, 28, 178, 0.1);
+}
+
+.progress-child1{
+    @include border(200px,0px);
+    width: 30%;
+    height: 5px;
+    margin-top: 5px;
+}
+.progress-parent2{
+    @include border(200px,0px);
+    background-color:  rgba(52, 167, 112, 0.1);
+}
+
+.progress-child2{
+    @include border(200px,0px);
+    width: 40%;
+    height: 5px;
+    margin-top: 5px;
+}
+.progress-parent3{
+    @include border(200px,0px);
+    background-color: rgba(8, 160, 247, 0.1);
+}
+
+.progress-child3{
+    @include border(200px,0px);
+    width: 20%;
+    height: 5px;
+    margin-top: 5px;
+}
+.border-bottom{
+border-bottom: solid 1px;
+border-color: #ECECEC;
+}
+
+
+.item-border{
+    border-left:solid 3px;
+    border-color: $sky-blue;
+}

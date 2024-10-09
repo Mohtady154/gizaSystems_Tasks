@@ -1,0 +1,42 @@
+@mixin flex($space ,$space2){
+    display: flex;
+    justify-content:$space;
+    align-items: $space2;
+}
+
+@mixin border($radius,$size){
+    border-radius: $radius;
+    border: solid $size ;
+}
+
+@mixin font($weight,$size,$line-height,$letter-spacing){
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+} 
+
+@mixin alert($color,$bg-color){
+    @include border(8px,0.5px);
+    width: 408px;
+    color: $color;
+    background-color: $bg-color;
+    margin-bottom: 16px;
+}
+
+@mixin button($color){
+    width: 281px;
+    padding:20px;
+}
+
+@mixin search-bar($width,$padding){
+padding: $padding;
+width:$width;
+background-color:$light-sky-b3;
+}
+
+
+
+
+
+

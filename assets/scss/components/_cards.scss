@@ -1,0 +1,77 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+
+.assign{
+    // width: 30%;
+    @include flex(space-between,normal);
+    @include border(8px,0px);
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 6px;
+
+    .assign-title{
+        @include flex(space-between,normal);
+        svg{
+            margin: auto;
+        }
+        p{
+            margin-left: 20px;
+        }
+    }
+}
+
+.card-list{
+    // width: 30%;
+    @include border(8px,0px);
+    padding-top: 28px;
+    
+    .search-label{
+         width:90%;
+        @include border(200px,0px);
+        margin: auto;
+       
+        padding-top: 5px ;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        
+       span{
+        margin-right: 25px;
+       }
+       input{
+        @include border(none,0px);
+       }
+    }
+
+    .items-list{
+
+        margin: 28px;
+        
+        .item{
+            @include flex (space-between,normal);
+            
+            padding-bottom: 10px;
+
+            .item-img{
+                width: 36px;
+            }
+
+            .info{  
+                
+                width: 80%;
+                @extend .item;
+                margin: auto;
+                
+
+                .name{
+                    @include font($medium,$size-3,$line-height-6,$s_5);
+                }
+
+                .details{
+                    @include font($small,$size-2,$line-height-6,$s_3)
+                }
+            }
+        }
+    }
+}
+

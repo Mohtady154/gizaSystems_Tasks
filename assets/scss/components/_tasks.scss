@@ -1,0 +1,43 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/colors" as*;
+@use "cards" as *;
+
+.tasks{
+    margin-top: 40px;
+    @extend .card-list;
+
+    h2{
+        margin-left: 28px;
+        @include font($medium,$size-5,$line-height-7,$s_3);
+    }
+
+
+
+    .item{
+        padding: 15px;
+        @include flex(space-between,normal);
+        .img-person{
+            width: 24px;
+        }
+        p{
+            @include font($medium,$size-3,$line-height-5,$s_5);
+        }
+
+        .icon{
+            width: 26px;
+            height: 26px;
+            background-color:rgba(8, 160, 247, 0.06);
+            @include border(50%,1px);
+            border-color: $sky-blue;
+        }
+
+        .colored-icon{
+            @extend .icon;
+            background-color: $sky-blue;
+            text-align: center;
+        }
+    }
+}
+    // width: 19%;
+
