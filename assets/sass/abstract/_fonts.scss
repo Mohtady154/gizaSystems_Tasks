@@ -1,0 +1,46 @@
+//font-weigh
+
+$font-weight: (
+    "fw-400" : 400,
+    "fw-500": 500,
+    "fw-700": 700,
+);
+
+@each $key , $value in $font-weight {
+    .#{$key} {
+        font-weight: $value;
+    }
+} 
+
+$font-size :(
+    "s-13" : 13px,
+    "s-16" : 16px, 
+    "s-20" : 20px,
+    "s-24" : 24px,
+    "s-32" : 32px
+);
+
+@each $key , $value in $font-size {
+    .#{$key}{
+        font-size: $value;
+    }
+}
+
+//line-height 
+
+$line-height: (
+"lh-38":38.4px, 
+"lh-31":31.3px,
+"lh-26":26.08px,
+"lh-24":24px, 
+"lh-20":20.86px, 
+"lh-19":19.2px, 
+"lh-16":16.95px, 
+"lh-15":15.6px, 
+);
+
+@each $key , $value in $line-height {
+    .#{$key}{
+        line-height: $value;
+    }
+}

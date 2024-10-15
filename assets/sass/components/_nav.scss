@@ -1,0 +1,39 @@
+
+header{
+    position: relative;
+
+    .icon{
+        margin-right: 25px;
+        text-align: center;
+        padding-bottom: 8px;
+        width: 50px;
+    }
+.items{
+    width: 23%;
+    
+    .frame1{
+        position: absolute;
+        width: 5px;
+        height: 70px;
+        left: 1235px;
+        top: 0px;
+        }
+
+        .frame2{
+            @extend .frame1;
+            left: 1335px;
+        }
+    
+    .profile{
+        margin: auto;
+        svg{
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+    }
+
+    }
+}
+
+
+

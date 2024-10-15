@@ -1,0 +1,19 @@
+$colors : (
+"white":rgba(255, 255, 255, 1),
+"light-white":rgba(243, 243, 241, 1),
+"light2-white":rgba(216, 216, 216, 0.2),
+"light3-white":rgba(246, 246, 246, 1),
+"grey":rgba(142, 154, 160, 1),
+"purble":rgba(79, 0, 140, 1),
+"coral":rgba(255, 55, 94, 1),
+);
+
+@each $key , $value in $colors {
+    .#{$key} {
+        color : $value;
+    }
+
+    .bg-#{$key}{
+        background-color : $value;
+    } 
+}
