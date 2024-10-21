@@ -1,0 +1,35 @@
+//font-weigh
+
+$font-weight: (
+    "fw-400" : 400,
+);
+
+@each $key , $value in $font-weight {
+    .#{$key} {
+        font-weight: $value;
+    }
+} 
+
+//font-size
+
+$font-size :(
+    "s-14" : 14px,
+);
+
+@each $key , $value in $font-size {
+    .#{$key}{
+        font-size: $value;
+    }
+}
+
+//line-height 
+
+$line-height: (
+"lh-21":21px, 
+);
+
+@each $key , $value in $line-height {
+    .#{$key}{
+        line-height: $value;
+    }
+}

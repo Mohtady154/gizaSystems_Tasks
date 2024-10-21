@@ -1,0 +1,40 @@
+section{
+    border-radius: 8px;
+    border: 1px;
+    width: 841px;
+table{
+    width: 100%;
+    .editing{
+        background-color: $light-red;
+    }
+    th{
+        padding: 16px;
+    }
+    tr{
+        td{
+            @extend th;
+            .edit{
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+            .edit:hover{
+                background-color: $tomato;
+                width: 65%;
+                height: 65%;
+            }
+            .form-check{
+                width: 24px;
+                height: 24px;
+                margin-left: 58.08px;
+                margin-right: 58.08px;
+            .form-check-input{
+                border:solid 3px;
+                border-color: $dark-gray;
+                width: 18px;
+                height: 18px;
+                }
+            }
+        }
+    }
+}
+}

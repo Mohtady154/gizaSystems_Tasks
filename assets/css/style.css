@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.s-14 {
+  font-size: 14px;
+}
+
+.lh-21 {
+  line-height: 21px;
+}
+
+.dark {
+  color: rgb(16, 44, 56);
+}
+
+.bg-dark {
+  background-color: rgb(16, 44, 56);
+}
+
+.gray {
+  color: rgba(16, 44, 56, 0.5);
+}
+
+.bg-gray {
+  background-color: rgba(16, 44, 56, 0.5);
+}
+
+.gray-light {
+  color: rgb(234, 241, 243);
+}
+
+.bg-gray-light {
+  background-color: rgb(234, 241, 243);
+}
+
+.border-bottom2 {
+  border-bottom: solid 2px;
+  border-color: rgb(227, 233, 235);
+}
+
+section {
+  border-radius: 8px;
+  border: 1px;
+  width: 841px;
+}
+section table {
+  width: 100%;
+}
+section table .editing {
+  background-color: #ffcccb;
+}
+section table th, section table tr td {
+  padding: 16px;
+}
+section table tr td .edit {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+section table tr td .edit:hover {
+  background-color: #ff6347;
+  width: 65%;
+  height: 65%;
+}
+section table tr td .form-check {
+  width: 24px;
+  height: 24px;
+  margin-left: 58.08px;
+  margin-right: 58.08px;
+}
+section table tr td .form-check .form-check-input {
+  border: solid 3px;
+  border-color: rgba(16, 44, 56, 0.5);
+  width: 18px;
+  height: 18px;
+}/*# sourceMappingURL=style.css.map */
