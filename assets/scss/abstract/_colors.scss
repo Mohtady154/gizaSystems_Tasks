@@ -1,0 +1,15 @@
+$colors : (
+"dark":rgba(16, 44, 56, 1),
+"gray":rgba(16, 44, 56, 0.5),
+"gray-light":rgba(234, 241, 243, 1),
+);
+
+@each $key , $value in $colors {
+    .#{$key} {
+        color : $value;
+    }
+
+    .bg-#{$key}{
+        background-color : $value;
+    } 
+}
