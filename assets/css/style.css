@@ -151,4 +151,29 @@ p {
   .exchange {
     font-size: 24px;
   }
+}
+
+.total {
+  display: flex;
+  width: 20%;
+}
+.total .symbol1 {
+  font-size: 32px;
+  margin-top: 13%;
+  padding-right: 10%;
+  color: black;
+}
+
+.difference-container {
+  font-size: 32px;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  color: rgb(20, 203, 143);
+}
+@media (max-width: 768px) {
+  .difference-container {
+    top: 30%;
+    right: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
