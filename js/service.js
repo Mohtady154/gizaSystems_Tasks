@@ -31,7 +31,13 @@ function fetchTimeSeriesData(timeframe, currency1, currency2) {
             console.error('Unsupported timeframe');
             return [];
     }
+    const cacheKey = `time-${timeframe}-${currency1}-${currency2}`;
+    const cacheData = localStorage.getItem(cacheKey);
 
+    if(timeframe==='1M'&&cacheData){
+        dataParsing = JSON.parse(cacheData);
+        console.log("Retrieved data from cache:", dataParsing);
+    }
     const formatDateTime = date => date.toISOString().slice(0, 16).replace('T', ' ');
     const formattedStartDate = interval === 'minute' ? formatDateTime(startDate) : startDate.toISOString().slice(0, 10);
     const formattedEndDate = interval === 'minute' ? formatDateTime(now) : now.toISOString().slice(0, 10);
@@ -46,7 +52,17 @@ function fetchTimeSeriesData(timeframe, currency1, currency2) {
             format: 'records'
         }
     })
-    .then(response => response.data.quotes)
+    .then(response =>{ const quotes = response.data.quotes;
+            if(timeframe==='1M'){
+                const cacheData ={
+                    data : quotes
+                };
+                stringData = JSON.stringify(cacheData);
+                localStorage.setItem(cacheKey,stringData);
+                console.log("Data cached for 1M timeframe");
+            }
+            return quotes;
+})
     .catch(error => {
         console.error('Error fetching time series data:', error);
         alert("Faild for fetching time series");
