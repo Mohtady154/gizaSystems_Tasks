@@ -78,6 +78,7 @@ async function initializeApp() {
             });
         });
     } catch (error) {
+        alert("Failed for loading the page");
         console.error("Error initializing app:", error);
     }
 }

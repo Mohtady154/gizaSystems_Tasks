@@ -1,5 +1,6 @@
 // Service functions will be available globally
 const apiKey = 'FzmfcPmV1zAM2MKJiHAL';
+
 function fetchTimeSeriesData(timeframe, currency1, currency2) {
     const now = new Date();
     const startDate = new Date(now);
@@ -35,7 +36,7 @@ function fetchTimeSeriesData(timeframe, currency1, currency2) {
     const formattedStartDate = interval === 'minute' ? formatDateTime(startDate) : startDate.toISOString().slice(0, 10);
     const formattedEndDate = interval === 'minute' ? formatDateTime(now) : now.toISOString().slice(0, 10);
 
-    return axios.get(`https://marketdata.tradermade.com/api/v1/timeseries`,{
+    return axios.get(`https://marketdata.tradermade.com/api/v1/timeseries`, {
         params: {
             api_key: apiKey,
             currency: `${currency1}${currency2}`,
@@ -48,6 +49,7 @@ function fetchTimeSeriesData(timeframe, currency1, currency2) {
     .then(response => response.data.quotes)
     .catch(error => {
         console.error('Error fetching time series data:', error);
+        alert("Faild for fetching time series");
         return [];
     });
 }
@@ -63,6 +65,7 @@ function fetchExchangeRate(currency1, currency2) {
     })
     .then(response => response.data.total)
     .catch(error => {
+        alert("Failed for appearing exchange rate");
         console.error("Error fetching exchange rate:", error);
         throw error;
     });
@@ -76,6 +79,7 @@ function fetchAvailableCurrencies() {
     })
     .then(response => response.data.available_currencies)
     .catch(error => {
+        alert("Failed for appearing currencies");
         console.error("Error fetching currencies:", error);
         throw error;
     });
