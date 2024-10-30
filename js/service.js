@@ -1,6 +1,5 @@
 // Service functions will be available globally
-const apiKey = 'TCu5IbaLR-0jMn9xPXn8';
-
+const apiKey = 'FzmfcPmV1zAM2MKJiHAL';
 function fetchTimeSeriesData(timeframe, currency1, currency2) {
     const now = new Date();
     const startDate = new Date(now);
@@ -36,7 +35,7 @@ function fetchTimeSeriesData(timeframe, currency1, currency2) {
     const formattedStartDate = interval === 'minute' ? formatDateTime(startDate) : startDate.toISOString().slice(0, 10);
     const formattedEndDate = interval === 'minute' ? formatDateTime(now) : now.toISOString().slice(0, 10);
 
-    return axios.get(`https://marketdata.tradermade.com/api/v1/timeseries`, {
+    return axios.get(`https://marketdata.tradermade.com/api/v1/timeseries`,{
         params: {
             api_key: apiKey,
             currency: `${currency1}${currency2}`,

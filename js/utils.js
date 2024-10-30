@@ -173,6 +173,6 @@ function updateUI(currency1, currency2) {
     flag1.className = `fi fi-${currencyCode[currency1.toUpperCase()]}`;
     flag2.className = `fi fi-${currencyCode[currency2.toUpperCase()]}`;
 
-    // Update currency pair display
+    //currency pair
     document.getElementById('currency-pair').textContent = `${currency1}/${currency2}`;
 } 

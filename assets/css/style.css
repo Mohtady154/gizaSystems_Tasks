@@ -165,10 +165,10 @@ p {
 }
 
 .difference-container {
-  font-size: 32px;
+  font-size: 25px;
   position: absolute;
   right: 5%;
-  top: 20%;
+  top: 18%;
   color: rgb(20, 203, 143);
 }
 @media (max-width: 768px) {
