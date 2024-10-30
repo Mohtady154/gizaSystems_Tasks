@@ -11,7 +11,7 @@ class TimeSeriesButtons {
                 
                 const timeFrame = button.dataset.timeframe;
                 const data = await fetchTimeSeriesData(timeFrame, currency1, currency2);
-                createChart(data); 
+                myChartInstance = createChart(data, myChartInstance);
             });
         });
     }
