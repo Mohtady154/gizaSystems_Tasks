@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FX Exchange</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Forex Exchange </h1>
+        <p>Check out the current price for a currency pair</p>
+        <div class="select-container">
+            <div>
+                <select id="dropDown1" class="form-control">
+                </select>
+            </div>
+            <div>
+                <select id="dropDown2" class="form-control">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+
+        <div class="currency-pair-container">
+            <div class="country-flag">
+                <span id="flag1" class="fi fi-us fis"></span>
+                <span id="flag2" class="fi fi-eu fis"></span>
+            </div>
+
+            <div class="results">
+                <h1 id="currency-pair"></h1>
+                <div class="total">
+                    <p id="symbol" class="symbol1"></p>
+                    <h2 id="exchange" class="exchange"></h2>
+                </div>
+                <div class="difference-container">
+                    <span id="difference"></span>
+                    <span id="difference-percentage"></span>
+                </div>
+            </div>
+        </div>
+        <canvas id="myChart"></canvas>
+        <div class="time-series">
+            <button id="time-series-1" class="active" data-timeframe="15M">15M</button>
+            <button id="time-series-2" data-timeframe="1H">1H</button>
+            <button id="time-series-3" data-timeframe="1D">1D</button>
+            <button id="time-series-4" data-timeframe="1W">1W</button>
+            <button id="time-series-5" data-timeframe="1M">1M</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/timeSeriesButtons.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
