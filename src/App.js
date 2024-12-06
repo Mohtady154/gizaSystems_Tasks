@@ -6,7 +6,7 @@ import UserTable from "./components/UserTable";
 const App = () => {
   const [users, setUsers] = useState([]);
 
-  // Fetch users 
+  // fetch users 
   useEffect(() => {
     fetch("http://localhost:3001/users")
       .then((response) => response.json())
@@ -14,7 +14,7 @@ const App = () => {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  // Add user
+  // add user
   const addUser = (formData) => {
     fetch("http://localhost:3001/users", {
       method: "POST",
@@ -26,7 +26,7 @@ const App = () => {
       .catch((error) => console.error("Error adding user:", error));
   };
 
-  // Update user
+  // update user
   const updateUser = (updatedUserData) => {
     fetch(`http://localhost:3001/users/${updatedUserData.id}`, {
       method: "PUT",
@@ -39,7 +39,7 @@ const App = () => {
       .catch((error) => console.error("Error updating user:", error));
   };
 
-  // Delete user
+  // delete user
   const deleteUser = (userId) => {
     fetch(`http://localhost:3001/users/${userId}`, {
       method: "DELETE",
