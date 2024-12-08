@@ -18,8 +18,8 @@ const EditModal = ({ user, updateUser }) => {
     handleClose();
   };
 
-  return (
-    <>
+  return <>
+  
       <button className="btn btn-success me-2" onClick={handleShow}>
         Edit
       </button>
@@ -78,7 +78,6 @@ const EditModal = ({ user, updateUser }) => {
         </Modal.Footer>
       </Modal>
     </>
-  );
 };
 
 export default EditModal;

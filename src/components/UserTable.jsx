@@ -5,8 +5,7 @@ import EditButton from "./EditButton";
 import DeleteButton from "./DeleteButton";
 
 const UserTable = ({ users, updateUser, deleteUser }) => {
-  return (
-    <div>
+  return <>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -35,8 +34,7 @@ const UserTable = ({ users, updateUser, deleteUser }) => {
           ))}
         </tbody>
       </Table>
-    </div>
-  );
+      </>
 };
 
 export default UserTable;

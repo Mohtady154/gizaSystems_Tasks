@@ -6,7 +6,7 @@ import UserTable from "./components/UserTable";
 const App = () => {
   const [users, setUsers] = useState([]);
 
-  // fetch users 
+  // Fetch users 
   useEffect(() => {
     fetch("http://localhost:3001/users")
       .then((response) => response.json())
@@ -14,7 +14,7 @@ const App = () => {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  // add user
+  // Add user
   const addUser = (formData) => {
     fetch("http://localhost:3001/users", {
       method: "POST",
@@ -26,7 +26,7 @@ const App = () => {
       .catch((error) => console.error("Error adding user:", error));
   };
 
-  // update user
+  // Update user
   const updateUser = (updatedUserData) => {
     fetch(`http://localhost:3001/users/${updatedUserData.id}`, {
       method: "PUT",
@@ -39,7 +39,7 @@ const App = () => {
       .catch((error) => console.error("Error updating user:", error));
   };
 
-  // delete user
+  // Delete user
   const deleteUser = (userId) => {
     fetch(`http://localhost:3001/users/${userId}`, {
       method: "DELETE",
@@ -50,13 +50,13 @@ const App = () => {
       .catch((error) => console.error("Error deleting user:", error));
   };
 
-  return (
+  return <>
     <div className="container">
       <h1 className="my-4">User Management</h1>
       <UserForm addUser={addUser} />
       <UserTable users={users} updateUser={updateUser} deleteUser={deleteUser} />
     </div>
-  );
+  </>
 };
 
 export default App;

@@ -5,11 +5,11 @@ const DeleteButton = ({ userId, deleteUser }) => {
     deleteUser(userId);
   };
 
-  return (
+  return <>
     <button className="btn btn-danger" onClick={handleDelete}>
       Delete
     </button>
-  );
+ </>
 };
 
 export default DeleteButton;

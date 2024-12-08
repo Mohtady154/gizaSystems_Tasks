@@ -19,7 +19,7 @@ const UserForm = ({ addUser }) => {
     setFormData({ firstName: "", lastName: "", email: "", phone: "" });
   };
 
-  return (
+  return <>
     <form onSubmit={handleSubmit} className="mb-4">
       <h4>Add New User</h4>
       <div className="row">
@@ -72,7 +72,7 @@ const UserForm = ({ addUser }) => {
         Save User
       </button>
     </form>
-  );
+    </>
 };
 
 export default UserForm;

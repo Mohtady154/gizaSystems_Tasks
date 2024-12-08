@@ -7,12 +7,11 @@ const DetailsModal = ({ user }) => {
   const handleShow = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
 
-  return (
-    <>
+  return <>
+  
       <button className="btn btn-info me-2" onClick={handleShow}>
         Details
       </button>
-
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>User Details</Modal.Title>
@@ -31,7 +30,6 @@ const DetailsModal = ({ user }) => {
         </Modal.Footer>
       </Modal>
     </>
-  );
 };
 
 export default DetailsModal;
