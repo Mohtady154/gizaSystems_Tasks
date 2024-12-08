@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import UserForm from "./components/UserForm";
 import UserTable from "./components/UserTable";
 
